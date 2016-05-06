@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		972B0DAA1CDBB2DB005D92C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972B0DA91CDBB2DB005D92C5 /* AppDelegate.swift */; };
+		972B0DAF1CDBB2DB005D92C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 972B0DAD1CDBB2DB005D92C5 /* Main.storyboard */; };
+		972B0DB21CDBB2DB005D92C5 /* TravelPal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 972B0DB01CDBB2DB005D92C5 /* TravelPal.xcdatamodeld */; };
+		972B0DB41CDBB2DB005D92C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 972B0DB31CDBB2DB005D92C5 /* Assets.xcassets */; };
+		972B0DB71CDBB2DB005D92C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 972B0DB51CDBB2DB005D92C5 /* LaunchScreen.storyboard */; };
+		972C56F61CDCD5D7002F2686 /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972C56F51CDCD5D7002F2686 /* StoriesViewController.swift */; };
+		972C56F81CDCD6EC002F2686 /* StoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972C56F71CDCD6EC002F2686 /* StoriesTableViewCell.swift */; };
+		972C56FC1CDCF323002F2686 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972C56FB1CDCF323002F2686 /* PersonViewController.swift */; };
+		972C56FE1CDD112D002F2686 /* PersonStoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972C56FD1CDD112D002F2686 /* PersonStoriesTableViewCell.swift */; };
+		972C57001CDD1FA4002F2686 /* AllPersonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972C56FF1CDD1FA4002F2686 /* AllPersonsViewController.swift */; };
+		972C57021CDD20F0002F2686 /* AllPersonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972C57011CDD20F0002F2686 /* AllPersonsTableViewCell.swift */; };
+		972C57041CDD2D07002F2686 /* AllStoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972C57031CDD2D07002F2686 /* AllStoriesTableViewCell.swift */; };
+		972C57061CDD2D21002F2686 /* AllStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972C57051CDD2D21002F2686 /* AllStoriesViewController.swift */; };
+		97BF22921CDBBB3500C9FDA4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BF22911CDBBB3500C9FDA4 /* HomeViewController.swift */; };
+		97BF22971CDBBB8400C9FDA4 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BF22961CDBBB8400C9FDA4 /* StoryViewController.swift */; };
+		97BF229A1CDBBBA100C9FDA4 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BF22981CDBBBA100C9FDA4 /* CityTableViewCell.swift */; };
+		97BF229B1CDBBBA100C9FDA4 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BF22991CDBBBA100C9FDA4 /* UserTableViewCell.swift */; };
+		97BF22A21CDBBC1900C9FDA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BF229E1CDBBC1900C9FDA4 /* Constants.swift */; };
+		97BF22A31CDBBC1900C9FDA4 /* CityUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BF229F1CDBBC1900C9FDA4 /* CityUtils.swift */; };
+		97BF22A41CDBBC1900C9FDA4 /* APIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BF22A01CDBBC1900C9FDA4 /* APIUtils.swift */; };
+		97BF22A51CDBBC1900C9FDA4 /* CoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BF22A11CDBBC1900C9FDA4 /* CoreDataUtils.swift */; };
+		97BF22B41CDBBE4500C9FDA4 /* PersonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BF22B31CDBBE4500C9FDA4 /* PersonUtils.swift */; };
+		97BF22B61CDBC1B200C9FDA4 /* StoryUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BF22B51CDBC1B200C9FDA4 /* StoryUtils.swift */; };
+		97BF22C11CDBC50700C9FDA4 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BF22BB1CDBC50700C9FDA4 /* Person+CoreDataProperties.swift */; };
+		97BF22C21CDBC50700C9FDA4 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BF22BC1CDBC50700C9FDA4 /* Person.swift */; };
+		97BF22C31CDBC50700C9FDA4 /* Story+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BF22BD1CDBC50700C9FDA4 /* Story+CoreDataProperties.swift */; };
+		97BF22C41CDBC50700C9FDA4 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BF22BE1CDBC50700C9FDA4 /* Story.swift */; };
+		97BF22C51CDBC50700C9FDA4 /* City+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BF22BF1CDBC50700C9FDA4 /* City+CoreDataProperties.swift */; };
+		97BF22C61CDBC50700C9FDA4 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BF22C01CDBC50700C9FDA4 /* City.swift */; };
+		AAC4725F17545CF33A7BA944 /* Pods_TravelPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533845BF434410A0C49B63C3 /* Pods_TravelPal.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		49D13CBF2DB65B42FEDB9692 /* Pods-TravelPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelPal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelPal/Pods-TravelPal.debug.xcconfig"; sourceTree = "<group>"; };
+		533845BF434410A0C49B63C3 /* Pods_TravelPal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelPal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		972B0DA61CDBB2DA005D92C5 /* TravelPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		972B0DA91CDBB2DB005D92C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		972B0DAE1CDBB2DB005D92C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		972B0DB11CDBB2DB005D92C5 /* TravelPal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TravelPal.xcdatamodel; sourceTree = "<group>"; };
+		972B0DB31CDBB2DB005D92C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		972B0DB61CDBB2DB005D92C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		972B0DB81CDBB2DB005D92C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		972C56F51CDCD5D7002F2686 /* StoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
+		972C56F71CDCD6EC002F2686 /* StoriesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesTableViewCell.swift; sourceTree = "<group>"; };
+		972C56FB1CDCF323002F2686 /* PersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
+		972C56FD1CDD112D002F2686 /* PersonStoriesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonStoriesTableViewCell.swift; sourceTree = "<group>"; };
+		972C56FF1CDD1FA4002F2686 /* AllPersonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPersonsViewController.swift; sourceTree = "<group>"; };
+		972C57011CDD20F0002F2686 /* AllPersonsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPersonsTableViewCell.swift; sourceTree = "<group>"; };
+		972C57031CDD2D07002F2686 /* AllStoriesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllStoriesTableViewCell.swift; sourceTree = "<group>"; };
+		972C57051CDD2D21002F2686 /* AllStoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllStoriesViewController.swift; sourceTree = "<group>"; };
+		97BF22911CDBBB3500C9FDA4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		97BF22961CDBBB8400C9FDA4 /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		97BF22981CDBBBA100C9FDA4 /* CityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		97BF22991CDBBBA100C9FDA4 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		97BF229E1CDBBC1900C9FDA4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		97BF229F1CDBBC1900C9FDA4 /* CityUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityUtils.swift; sourceTree = "<group>"; };
+		97BF22A01CDBBC1900C9FDA4 /* APIUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUtils.swift; sourceTree = "<group>"; };
+		97BF22A11CDBBC1900C9FDA4 /* CoreDataUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataUtils.swift; sourceTree = "<group>"; };
+		97BF22B31CDBBE4500C9FDA4 /* PersonUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonUtils.swift; sourceTree = "<group>"; };
+		97BF22B51CDBC1B200C9FDA4 /* StoryUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryUtils.swift; sourceTree = "<group>"; };
+		97BF22BB1CDBC50700C9FDA4 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		97BF22BC1CDBC50700C9FDA4 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		97BF22BD1CDBC50700C9FDA4 /* Story+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Story+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		97BF22BE1CDBC50700C9FDA4 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		97BF22BF1CDBC50700C9FDA4 /* City+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "City+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		97BF22C01CDBC50700C9FDA4 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		BFCB1D70D641F4D020298C89 /* Pods-TravelPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelPal.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravelPal/Pods-TravelPal.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		972B0DA31CDBB2DA005D92C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC4725F17545CF33A7BA944 /* Pods_TravelPal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6DD61FE3C2C45C86CE663163 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				533845BF434410A0C49B63C3 /* Pods_TravelPal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D40058E32BADB1715F67A4C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49D13CBF2DB65B42FEDB9692 /* Pods-TravelPal.debug.xcconfig */,
+				BFCB1D70D641F4D020298C89 /* Pods-TravelPal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		972B0D9D1CDBB2DA005D92C5 = {
+			isa = PBXGroup;
+			children = (
+				972B0DA81CDBB2DB005D92C5 /* TravelPal */,
+				972B0DA71CDBB2DA005D92C5 /* Products */,
+				7D40058E32BADB1715F67A4C /* Pods */,
+				6DD61FE3C2C45C86CE663163 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		972B0DA71CDBB2DA005D92C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				972B0DA61CDBB2DA005D92C5 /* TravelPal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		972B0DA81CDBB2DB005D92C5 /* TravelPal */ = {
+			isa = PBXGroup;
+			children = (
+				97BF22931CDBBB3C00C9FDA4 /* Controllers */,
+				97BF229C1CDBBBC300C9FDA4 /* Cells */,
+				97BF229D1CDBBC0700C9FDA4 /* Utils */,
+				972B0DA91CDBB2DB005D92C5 /* AppDelegate.swift */,
+				972B0DAD1CDBB2DB005D92C5 /* Main.storyboard */,
+				972B0DB31CDBB2DB005D92C5 /* Assets.xcassets */,
+				972B0DB51CDBB2DB005D92C5 /* LaunchScreen.storyboard */,
+				972B0DB81CDBB2DB005D92C5 /* Info.plist */,
+				972B0DB01CDBB2DB005D92C5 /* TravelPal.xcdatamodeld */,
+				97BF22AC1CDBBC4B00C9FDA4 /* CoreData */,
+			);
+			path = TravelPal;
+			sourceTree = "<group>";
+		};
+		97BF22931CDBBB3C00C9FDA4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				97BF22911CDBBB3500C9FDA4 /* HomeViewController.swift */,
+				972C56F51CDCD5D7002F2686 /* StoriesViewController.swift */,
+				97BF22961CDBBB8400C9FDA4 /* StoryViewController.swift */,
+				972C56FB1CDCF323002F2686 /* PersonViewController.swift */,
+				972C56FF1CDD1FA4002F2686 /* AllPersonsViewController.swift */,
+				972C57051CDD2D21002F2686 /* AllStoriesViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		97BF229C1CDBBBC300C9FDA4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				97BF22981CDBBBA100C9FDA4 /* CityTableViewCell.swift */,
+				97BF22991CDBBBA100C9FDA4 /* UserTableViewCell.swift */,
+				972C56F71CDCD6EC002F2686 /* StoriesTableViewCell.swift */,
+				972C56FD1CDD112D002F2686 /* PersonStoriesTableViewCell.swift */,
+				972C57011CDD20F0002F2686 /* AllPersonsTableViewCell.swift */,
+				972C57031CDD2D07002F2686 /* AllStoriesTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		97BF229D1CDBBC0700C9FDA4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				97BF229E1CDBBC1900C9FDA4 /* Constants.swift */,
+				97BF22A01CDBBC1900C9FDA4 /* APIUtils.swift */,
+				97BF229F1CDBBC1900C9FDA4 /* CityUtils.swift */,
+				97BF22B31CDBBE4500C9FDA4 /* PersonUtils.swift */,
+				97BF22B51CDBC1B200C9FDA4 /* StoryUtils.swift */,
+				97BF22A11CDBBC1900C9FDA4 /* CoreDataUtils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		97BF22AC1CDBBC4B00C9FDA4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				97BF22BB1CDBC50700C9FDA4 /* Person+CoreDataProperties.swift */,
+				97BF22BC1CDBC50700C9FDA4 /* Person.swift */,
+				97BF22BD1CDBC50700C9FDA4 /* Story+CoreDataProperties.swift */,
+				97BF22BE1CDBC50700C9FDA4 /* Story.swift */,
+				97BF22BF1CDBC50700C9FDA4 /* City+CoreDataProperties.swift */,
+				97BF22C01CDBC50700C9FDA4 /* City.swift */,
+			);
+			name = CoreData;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		972B0DA51CDBB2DA005D92C5 /* TravelPal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 972B0DBB1CDBB2DB005D92C5 /* Build configuration list for PBXNativeTarget "TravelPal" */;
+			buildPhases = (
+				2F807DB487DF9719A443511B /* Check Pods Manifest.lock */,
+				972B0DA21CDBB2DA005D92C5 /* Sources */,
+				972B0DA31CDBB2DA005D92C5 /* Frameworks */,
+				972B0DA41CDBB2DA005D92C5 /* Resources */,
+				33702A7242D12477A42A4F48 /* Embed Pods Frameworks */,
+				B6BF1E63598C9701CA2579D0 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TravelPal;
+			productName = TravelPal;
+			productReference = 972B0DA61CDBB2DA005D92C5 /* TravelPal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		972B0D9E1CDBB2DA005D92C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Totti;
+				TargetAttributes = {
+					972B0DA51CDBB2DA005D92C5 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 972B0DA11CDBB2DA005D92C5 /* Build configuration list for PBXProject "TravelPal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 972B0D9D1CDBB2DA005D92C5;
+			productRefGroup = 972B0DA71CDBB2DA005D92C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				972B0DA51CDBB2DA005D92C5 /* TravelPal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		972B0DA41CDBB2DA005D92C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				972B0DB71CDBB2DB005D92C5 /* LaunchScreen.storyboard in Resources */,
+				972B0DB41CDBB2DB005D92C5 /* Assets.xcassets in Resources */,
+				972B0DAF1CDBB2DB005D92C5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F807DB487DF9719A443511B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		33702A7242D12477A42A4F48 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravelPal/Pods-TravelPal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6BF1E63598C9701CA2579D0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravelPal/Pods-TravelPal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		972B0DA21CDBB2DA005D92C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				972C57061CDD2D21002F2686 /* AllStoriesViewController.swift in Sources */,
+				97BF22C21CDBC50700C9FDA4 /* Person.swift in Sources */,
+				97BF22C11CDBC50700C9FDA4 /* Person+CoreDataProperties.swift in Sources */,
+				97BF22971CDBBB8400C9FDA4 /* StoryViewController.swift in Sources */,
+				97BF22C41CDBC50700C9FDA4 /* Story.swift in Sources */,
+				97BF229A1CDBBBA100C9FDA4 /* CityTableViewCell.swift in Sources */,
+				97BF22B41CDBBE4500C9FDA4 /* PersonUtils.swift in Sources */,
+				97BF22C31CDBC50700C9FDA4 /* Story+CoreDataProperties.swift in Sources */,
+				97BF22A51CDBBC1900C9FDA4 /* CoreDataUtils.swift in Sources */,
+				97BF22A31CDBBC1900C9FDA4 /* CityUtils.swift in Sources */,
+				97BF22A41CDBBC1900C9FDA4 /* APIUtils.swift in Sources */,
+				972C56F61CDCD5D7002F2686 /* StoriesViewController.swift in Sources */,
+				97BF22C51CDBC50700C9FDA4 /* City+CoreDataProperties.swift in Sources */,
+				972C56FE1CDD112D002F2686 /* PersonStoriesTableViewCell.swift in Sources */,
+				972B0DB21CDBB2DB005D92C5 /* TravelPal.xcdatamodeld in Sources */,
+				972C57021CDD20F0002F2686 /* AllPersonsTableViewCell.swift in Sources */,
+				972C56FC1CDCF323002F2686 /* PersonViewController.swift in Sources */,
+				97BF229B1CDBBBA100C9FDA4 /* UserTableViewCell.swift in Sources */,
+				972C57001CDD1FA4002F2686 /* AllPersonsViewController.swift in Sources */,
+				97BF22B61CDBC1B200C9FDA4 /* StoryUtils.swift in Sources */,
+				972B0DAA1CDBB2DB005D92C5 /* AppDelegate.swift in Sources */,
+				972C57041CDD2D07002F2686 /* AllStoriesTableViewCell.swift in Sources */,
+				97BF22921CDBBB3500C9FDA4 /* HomeViewController.swift in Sources */,
+				97BF22C61CDBC50700C9FDA4 /* City.swift in Sources */,
+				97BF22A21CDBBC1900C9FDA4 /* Constants.swift in Sources */,
+				972C56F81CDCD6EC002F2686 /* StoriesTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		972B0DAD1CDBB2DB005D92C5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				972B0DAE1CDBB2DB005D92C5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		972B0DB51CDBB2DB005D92C5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				972B0DB61CDBB2DB005D92C5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		972B0DB91CDBB2DB005D92C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		972B0DBA1CDBB2DB005D92C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		972B0DBC1CDBB2DB005D92C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49D13CBF2DB65B42FEDB9692 /* Pods-TravelPal.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TravelPal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TravelPal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		972B0DBD1CDBB2DB005D92C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFCB1D70D641F4D020298C89 /* Pods-TravelPal.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TravelPal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TravelPal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		972B0DA11CDBB2DA005D92C5 /* Build configuration list for PBXProject "TravelPal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				972B0DB91CDBB2DB005D92C5 /* Debug */,
+				972B0DBA1CDBB2DB005D92C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		972B0DBB1CDBB2DB005D92C5 /* Build configuration list for PBXNativeTarget "TravelPal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				972B0DBC1CDBB2DB005D92C5 /* Debug */,
+				972B0DBD1CDBB2DB005D92C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		972B0DB01CDBB2DB005D92C5 /* TravelPal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				972B0DB11CDBB2DB005D92C5 /* TravelPal.xcdatamodel */,
+			);
+			currentVersion = 972B0DB11CDBB2DB005D92C5 /* TravelPal.xcdatamodel */;
+			path = TravelPal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 972B0D9E1CDBB2DA005D92C5 /* Project object */;
+}
