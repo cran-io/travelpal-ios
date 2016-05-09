@@ -67,6 +67,17 @@ class StoryUtils {
             story.personId = personId
         }
         
+        let storyAuthor = Person.MR_findFirstByAttribute("id", withValue: story.personId!)
+        let storyCity = City.MR_findFirstByAttribute("id", withValue: story.cityId!)
+        
+        if storyAuthor != nil {
+            story.person = storyAuthor
+        }
+        
+        if storyCity != nil {
+            story.city = storyCity
+        }
+        
         return story
     }
 }

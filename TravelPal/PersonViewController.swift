@@ -27,20 +27,36 @@ class PersonViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        self.title = "\(person.name!) \(person.lastName!)"
+        stories = Story.MR_findByAttribute("personId", withValue: person.id!) as! [Story]
         
-        self.personBrief.text = person.brief!
-        self.personNationality.text = "Nationality: \(person.nationality!)"
+        if let name = person.name {
+            if let lastName = person.lastName {
+                self.title = "\(name) \(lastName)"
+            }
+        }
         
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-        dateFormatter.dateStyle = .ShortStyle
-        let birth = dateFormatter.stringFromDate(person.birthdate!)
+        if let brief = person.brief {
+            self.personBrief.text = brief
+        }
         
-        self.personBirthdate.text = "Birthdate: \(birth)"
+        if let nationality = person.nationality {
+            self.personNationality.text = "Nationality: \(nationality)"
+        }
+        
+        if let birthdate = person.birthdate {
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+            dateFormatter.dateStyle = .ShortStyle
+            let calendar = NSCalendar.currentCalendar()
+            let now = NSDate()
+            let ageComponents = calendar.components(.Year,
+                                                    fromDate: birthdate,
+                                                    toDate: now,
+                                                    options: [])
+            self.personBirthdate.text = "Age: \(ageComponents.year)"
+        }
         
         personPicture.image = UIImage(named: "person2")
-        
-        stories = Story.MR_findByAttribute("personId", withValue: person.id!) as! [Story]
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -54,11 +70,17 @@ class PersonViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // MARK: Actions
     @IBAction func instagramPressed(sender: AnyObject) {
-        
+        let instagram = "https://instagram.com/\(person.instagram!)"
+        if UIApplication.sharedApplication().canOpenURL(NSURL(string: instagram)!) {
+            UIApplication.sharedApplication().openURL(NSURL(string: instagram)!)
+        }
     }
     
     @IBAction func twitterPressed(sender: AnyObject) {
-        
+        let twitter = "https://twitter.com/\(person.twitter!)"
+        if UIApplication.sharedApplication().canOpenURL(NSURL(string: twitter)!) {
+            UIApplication.sharedApplication().openURL(NSURL(string: twitter)!)
+        }
     }
     
     // MARK: TableView
@@ -85,15 +107,31 @@ class PersonViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.personStoryUpdate.text = dateFormatter.stringFromDate(story.updatedAt!)
         }
         
-        cell.personStoryTitle.text = story.title
-        cell.personStorySubtitle.text = story.subTitle
-        cell.personStoryCity.text = city.name
+        if let title = story.title {
+            cell.personStoryTitle.text = title
+        }
+        
+        if let subTitle = story.subTitle {
+            cell.personStorySubtitle.text = subTitle
+        }
+        
+        if let cityName = city.name {
+            cell.personStoryCity.text = cityName
+        }
+        
         cell.personStoryPicture.image = UIImage(named: "ciudad\(indexPath.row)")
         
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        if let vc = storyboard?.instantiateViewControllerWithIdentifier("StoryVC") as? StoryViewController {
+            vc.story = stories[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Stories:"
     }
 }

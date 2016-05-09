@@ -47,6 +47,13 @@ class StoriesViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    @IBAction func categoryButtonPressed(sender: AnyObject) {
+        let index  = sender.tag
+        let category = stories[index].category
+        
+    }
+    
+    
     // MARK: TableView
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stories.count
@@ -70,6 +77,7 @@ class StoriesViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.storyCategory.setTitle(story.category, forState: .Normal)
         cell.storyPicture.image = UIImage(named: "person\(indexPath.row)")
         cell.storyAuthor.tag = indexPath.row
+        cell.storyCategory.tag = indexPath.row
         
         cell.storyAuthor.setTitle("\(author.name!) \(author.lastName!)", forState: .Normal)
         cell.storyAuthor.sizeToFit()

@@ -46,15 +46,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func finishSavingStories() {
-        fStories = true
-        reloadData()
+        cities = City.MR_findAll() as! [City]
+        self.tableView.reloadData()
+        SVProgressHUD.dismiss()
     }
-    
+
     func reloadData(){
-        if fPersons && fStories && fCities {
-            cities = City.MR_findAll() as! [City]
-            self.tableView.reloadData()
-            SVProgressHUD.dismiss()
+        if fPersons && fCities {
+            APIUtils.getStories()
         }
     }
     
@@ -85,7 +84,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             vc.city = cities[indexPath.row]
             self.navigationController?.pushViewController(vc, animated: true)
         }
-        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

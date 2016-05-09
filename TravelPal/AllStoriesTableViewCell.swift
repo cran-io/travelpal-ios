@@ -9,16 +9,9 @@
 import UIKit
 
 class AllStoriesTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    @IBOutlet weak var storyTitle: UILabel!
+    @IBOutlet weak var storyCategory: UILabel!
+    @IBOutlet weak var storyAuthor: UILabel!
+    @IBOutlet weak var storyCity: UILabel!
+    @IBOutlet weak var storyUpdated: UILabel!
 }

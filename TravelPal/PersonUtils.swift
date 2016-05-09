@@ -41,7 +41,7 @@ class PersonUtils {
             person.lastName = lastName
         }
         
-        if let profession = json["profression"].string {
+        if let profession = json["profession"].string {
             person.profession = profession
         }
         

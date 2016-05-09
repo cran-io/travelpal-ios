@@ -14,7 +14,6 @@ class APIUtils {
     class func getAll() {
         self.getPersons()
         self.getCities()
-        self.getStories()
     }
     
     class func getCities() {
@@ -24,7 +23,6 @@ class APIUtils {
                 case .Success(let json):
                     let swiftyJSONObject = JSON(json)
                     CityUtils.saveCities(swiftyJSONObject)
-                    CoreDataUtils.saveCoreData()
                 case .Failure(let error):
                     print("Error: \(error)")
                 }
@@ -38,7 +36,6 @@ class APIUtils {
                 case .Success(let json):
                     let swiftyJSONObject = JSON(json)
                     StoryUtils.saveStories(swiftyJSONObject)
-                    CoreDataUtils.saveCoreData()
                 case .Failure(let error):
                     print("Error: \(error)")
                 }
@@ -52,7 +49,6 @@ class APIUtils {
                 case .Success(let json):
                     let swiftyJSONObject = JSON(json)
                     PersonUtils.savePersons(swiftyJSONObject)
-                    CoreDataUtils.saveCoreData()
                 case .Failure(let error):
                     print("Error: \(error)")
                 }

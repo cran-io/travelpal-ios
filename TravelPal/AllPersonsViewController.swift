@@ -26,27 +26,57 @@ class AllPersonsViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     // MARK: TableView
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AllPersonsCell") as! AllPersonsTableViewCell
-        let person = persons[indexPath.row]
-//        let now = NSDate()
-//        let calendar = NSCalendar.currentCalendar()
-//        let ageComponents = calendar.components(.Year, fromDate: person.birthdate!, toDate: now, options: NSCalendarOptions(rawValue: 0))
-        let storiesCount = Story.MR_findByAttribute("personId", withValue: person.id!)
-        cell.allName.text = "\(person.name!) \(person.lastName!)"
-        cell.allProfession.text = "Profession: \(person.profession)"
-        cell.allNationality.text = "Nationality: \(person.nationality)"
-//        cell.allBirthdate.text = "Age: \(ageComponents)"
-        cell.allStoriesCount.text = String(storiesCount?.count)
-        
-        return cell
-    }
-    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return persons.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("AllPersonsCell") as! AllPersonsTableViewCell
+        let person = persons[indexPath.row]
+        
+        if let name = person.name {
+            if let lastName = person.lastName {
+                cell.allName.text = "\(name) \(lastName)"
+            }
+        }
+        
+        if let profession = person.profession {
+            cell.allProfession.text = "Profession: \(profession)"
+        }
+        
+        if let nationality = person.nationality {
+            cell.allNationality.text = "Nationality: \(nationality)"
+        }
+        
+        if let countStories = person.stories?.count {
+            cell.allStoriesCount.text = "Stories: \(countStories)"
+        }
+        
+        if let birthdate = person.birthdate {
+            let dateFormatter = NSDateFormatter()
+            let calendar = NSCalendar.currentCalendar()
+            let now = NSDate()
+            
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+            dateFormatter.dateStyle = .ShortStyle
+            
+            let ageComponents = calendar.components(.Year,
+                                                    fromDate: birthdate,
+                                                    toDate: now,
+                                                    options: [])
+            cell.allBirthdate.text = "Age: \(ageComponents.year)"
+        }
+        return cell
+    }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let vc = storyboard?.instantiateViewControllerWithIdentifier("PersonVC") as? PersonViewController {
+            vc.person = persons[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
